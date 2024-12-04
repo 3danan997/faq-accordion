@@ -1,0 +1,107 @@
+@font-face{
+    font-family: worksans;
+    src:url(assets/fonts/WorkSans-VariableFont_wght.ttf)
+}
+
+body{
+    background: hsl(275, 100%, 97%);
+    margin:0;
+    font-family: worksans;
+    color: hsl(292, 42%, 14%);
+    display:grid;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section{
+    position: relative;
+    min-width: 30%;
+    max-width: 90%;
+    margin: auto;
+    bottom: 10vh;
+    background-color: white;
+    border-radius: 15px;
+}
+section > div{
+    padding: 5%;
+    box-shadow: 16px 13px 36px hsla(292, 16%, 50%, 0.11);
+    
+}
+h1::before{
+    content: "";
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    background-image: url(assets/images/icon-star.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+}
+
+h1{
+    font-size: 50px;
+    margin-top:0.5rem;
+}
+.container{
+    width: 100%;
+    max-width: 50rem;
+}
+.questions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h4{
+    cursor: pointer;
+}
+i{
+    content: "";
+    display: inline-block;
+    min-width: 2rem;
+    min-height: 2rem;
+    background-image: url(assets/images/icon-plus.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+i.clicked{
+    background-image: url(assets/images/icon-minus.svg);
+}
+
+h4:hover{
+    color: hsl(292, 76%, 40%);
+    cursor: pointer;
+}
+p{
+    display: none;
+    overflow: hidden;
+}
+.clicked{
+    display: block;
+}
+
+hr{
+    margin-block: 2rem;
+    height: 1px;
+    background-color: gray;
+    border: none;
+    opacity: 0.1;
+}
+
+.attribution{
+    place-content: end;
+}
+
+@media (max-width:450px){
+img{
+    height: 300%;
+}
+section{
+    width: 95%;
+    bottom: -10vh;
+    border-radius: 10px;
+}
+}
